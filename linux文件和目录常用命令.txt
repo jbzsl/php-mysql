@@ -1,0 +1,94 @@
+
+linux 命令格式 #命令 选项 参数
+选项：用来修饰命令如何执行
+  长选项：后面使用--接一个单词
+  短选项：后面使用-接一个字符
+  参数：命令的作用对象
+
+
+
+文件操作
+1.ls 列出目录下的文件和文件夹,但是不详细
+2.ls --all /ls -a 列出文件的详细新消息包括掩藏文件
+3.ls -l 列出目录的文件包括权限
+4.ls dir/ 列出特定目录下的文件和文件夹
+
+touch a.txt 创建文件
+5.cat a.txt 查看文件的内容
+6.echo 'hi world'> a.txt 向文件写入内容
+7.file a.txt 查看文件的类型(linux下没有文件后缀的概念)
+cp 复制文件
+cp /etc/passwd ./
+
+查看大文件的内容
+more passwd
+less passwd
+tail passwd 查看文件末行的内容
+tail -n 2 passwd 查看指定行数
+head passwd 查看文件首部内容
+head -n 2 passwd 查看指定头部行数
+
+
+
+
+8.cd ../进入目录
+9.pwd 查看当前工作的路径
+rm -r 删除目录（提示）
+rm -rf a强制删除目录（不做提示）
+mkdir 创建目录
+mkdir -p a/b/c 递归创建目录
+
+权限
+su - user 切换用户
+passwd 修改密码
+
+删除
+rm 删除文件
+mv 文件重命名
+
+10.rm a.txt 带提示的删除
+
+11. rm -f a.txt 强制删除，不提示
+rm -f b.txt c 删除多个文件
+
+
+12.查看网卡配置信息------ifconfig
+重启网卡 service network restart
+
+13.clear 清屏
+
+
+14.查看当前执行过的命令:history
+
+
+15.绝对路径和相对路径
+绝对路径----从文件系统树的根目录开始/
+cd /home/wsj
+相对路径  cd  .(当前目录)  ..（上一级目录）  cd  ../root/ 
+
+
+16.常用快捷键配置
+cd 
+pwd
+vim .bashrc
+alias cls = 'clear'
+. .bashrc 读取配置文件
+
+17. ctrl-c 终止命令的执行
+
+
+/**********常见学习网站************/
+https://linux.cn/article-5893-1.html
+http://www.linuxeden.com/index.php
+http://releases.ubuntu.com/14.04.3/
+http://www.linfo.org/
+http://www.51-n.com/10-1/
+http://www.wuxiancheng.cn/
+http://www.ituring.com.cn/book/1277
+http://emuch.net/html/201206/4571925.html
+http://www.zhaonew.com/
+http://bbs.feng.com/read-htm-tid-4998822.html
+https://www.kernel.org/
+http://tour.ubuntu.com/zh-CN/
+
+
