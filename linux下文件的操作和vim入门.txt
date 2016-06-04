@@ -1,0 +1,122 @@
+1.文件的拷贝
+cp a.txt /home/wsj/a.txt
+
+拷贝文件夹
+cp -r a /home/wsj
+
+
+
+2.文件或文件夹重命名
+
+mv a cc//文件夹重命名为cc
+mv a.txt b.txt 文件重命名
+mv cc /home/wsj移动文件
+
+
+vim编辑器命令
+(1)hjkl----上下移动命令
+(2)模式：命令模式(esc)--->末行模式(:)---->插入模式(i)
+命令:
+yy 复制一行
+nyy复制多行
+dd 删除一行
+ndd 删除多行
+dw 删除一个单词
+x----删除当个字符
+d$删除当前到行尾
+dG删除当前光标到文件尾
+dgg删除当前光标到文件头部
+:n跳转到底n行
+$-----跳转到当前光标的行尾
+0---跳到当前光标的行首
+
+G----跳到文件的尾部
+gg----跳到文件的首部
+
+p张贴
+o当前行后面插入
+O当前行前面插入
+
+I(#)跳到行首
+$跳到行尾
+
+设置行号
+set nu
+
+
+
+
+末行模式：
+保存:
+:wq-----保存并退出
+:q!强制退出
+:x----保存退出
+
+
+查找
+:/wsj---查找关键字---高亮显示
+
+n-----向下跳转
+N----向上跳转
+
+
+替换
+:s/hello/123456 将光标所在行的第一个hello替换为123456
+
+:s/is/are/g 将当前行的is全部换为are
+:%s/is/are----替换当前文档的is----为are
+
+w new.txt生成新文件并保存
+
+:u撤消
+vim 锁屏 ----ctrl-s ----》接锁屏:ctrl-q
+
+
+
+修改linux 的默认运行环境
+vim  /etc/inittab
+init 3切换模式
+
+
+权限操作
+增加用户:
+ useradd wsj;
+ passwd wsj
+ ----输入密码
+删除用户
+userdel -r wsj
+
+查看用户的密码保存信息
+vim /etc/passwd
+密码是保存在影子文件中的:cat /etc/shadow
+
+
+
+
+#增加组
+groupadd super
+查看组信息
+cat /etc/group
+
+
+
+#将用户增加到组
+gpasswd -a wsj super
+删除组:groupdel super
+将用户从组中删除 gpasswd -d user1 super
+
+
+#权限分配
+拥有者(ower---u u+r,u+w,o+x)
+所属组(group---g g+r,g+w,g+x)
+其他人(other---o o+r,o+w,o+x)
+
+chmod 777 a.txt
+chmod 777 aaa
+
+chown
+
+追加: ls -l >> a.txt
+管道 cat /etc/passwd|grep root
+
+
